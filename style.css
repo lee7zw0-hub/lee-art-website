@@ -1,0 +1,61 @@
+/* Load Centaur font if you have it. If not, browser will fall back. */
+@font-face {
+    font-family: 'Centaur';
+    src: url('Centaur.woff2') format('woff2'),
+         url('Centaur.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Background */
+body {
+    margin: 0;
+    background-color: #e8eaeb; /* default background */
+    font-family: 'Centaur', serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main desktop window */
+.desktop-window {
+    background-color: #a3bfd9; /* desktop box color */
+    width: calc(100vw - 6in);  /* 3 inches each side */
+    height: calc(100vh - 6in);
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Top bar */
+.window-bar {
+    background-color: #1f315d; /* accent color */
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+/* Left text */
+.home-text {
+    user-select: none;
+}
+
+/* Fake close button */
+.close-btn {
+    user-select: none;
+    font-weight: bold;
+    cursor: default;
+}
+
+/* Content area */
+.window-content {
+    flex: 1;
+    padding: 20px;
+}
